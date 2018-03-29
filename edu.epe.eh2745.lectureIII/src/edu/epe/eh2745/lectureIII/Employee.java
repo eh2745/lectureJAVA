@@ -17,22 +17,22 @@ public class Employee
 	
 	public void salary()
 	{
-		double totalsalary;
+		double totalsalary= 0;
 		
 		if (this.basePay< 8.00)
 			System.out.printf("ERROR!: %s salary is less then $8.00 \n", this.name);
 		else
 		{
 			if (this.hoursWorked> 40)
-				this.basePay= this.basePay* (hoursWorked-40)*1.5;
-			
-			totalsalary= this.basePay* this.hoursWorked;
+				totalsalary= this.basePay*40+ 1.5*this.basePay* (hoursWorked-40);
 			System.out.printf("%s salary is %.02f \n",this.name, totalsalary);
 		}	
 	}
 	
 	public void office()
 	{
+		// char professionalLevel;
+		// if (this.professionalLevel== 'A') 
 		if (this.professionLevel.equals("A"))
 			System.out.printf("%s works in an %s \n", this.name, "Individual Room");
 		else if (this.professionLevel.equals("B"))
