@@ -17,16 +17,15 @@ public class Employee
 	
 	public void salary()
 	{
-		double totalsalary;
+		double totalsalary= 0;
 		
 		if (this.basePay< 8.00)
 			System.out.printf("ERROR!: %s salary is less then $8.00 \n", this.name);
 		else
 		{
 			if (this.hoursWorked> 40)
-				this.basePay= this.basePay* (hoursWorked-40)*1.5;
+				totalsalary= this.basePay* this.hoursWorked+ this.basePay*1.5*(hoursWorked-40);
 			
-			totalsalary= this.basePay* this.hoursWorked;
 			System.out.printf("%s salary is %.02f \n",this.name, totalsalary);
 		}	
 	}
